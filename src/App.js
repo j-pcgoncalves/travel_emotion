@@ -1,8 +1,10 @@
-import logo from "./logo.png";
-// import `css`and `ThemeProvider` from "@emotion/react" package
-// import styled components, theming and animation from "./styles.js" file
 /** @jsxImportSource @emotion/react */
-import { css } from "@emotion/react";
+import { css } from "@emotion/react";
+
+import { CardWrapper } from "./styles.js";
+
+import logo from "./logo.png";
+
 
 const hotels = [
   {
@@ -28,7 +30,6 @@ const hotels = [
   },
 ];
 
-// Apply styling to code within the `App` component's `return` statement using styled components, theming, animation and the `css` prop
 function App() {
   return (
     <main
@@ -64,7 +65,7 @@ function App() {
     >
       {hotels.map((hotel) => {
         return (
-          <div key={hotel.id}>
+          <CardWrapper key={hotel.id}>
             <img src={hotel.src} alt={hotel.alt} />
             <div>
               <h2>{hotel.title}</h2>
@@ -74,7 +75,7 @@ function App() {
               <button>Details</button>
               <button>Book</button>
             </div>
-          </div>
+          </CardWrapper>
         );
       })}
     </div>
