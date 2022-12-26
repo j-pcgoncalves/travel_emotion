@@ -2,6 +2,7 @@
 import { css, ThemeProvider } from "@emotion/react";
 
 import {
+  LogoSpin,
   theme, 
   CardWrapper,
   ImageWrapper,
@@ -61,6 +62,7 @@ function App() {
           margin-left: 15px;
           height: 100px;
           width: 100px;
+          animation: ${LogoSpin} 10s linear infinite;       
         `}
       />
       <div
